@@ -38,7 +38,7 @@
     <type label="Inet CIDR Addr" length="0" sql="CIDR" quote="'"/>
     <type label="Geometry" length="0" sql="GEOMETRY" quote="'"/>
   </group>
-</datatypes><table x="926" y="126" name="users">
+</datatypes><table x="806" y="301" name="users">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -57,28 +57,37 @@
 <row name="address" null="1" autoincrement="0">
 <datatype>CHAR</datatype>
 <default>NULL</default></row>
+<row name="kid_name" null="1" autoincrement="0">
+<datatype>CHAR</datatype>
+<default>NULL</default></row>
+<row name="kid_gender" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="1231" y="136" name="equipments">
+<table x="1301" y="297" name="equipments">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="sport" null="1" autoincrement="0">
 <datatype>CHAR</datatype>
 <default>NULL</default></row>
-<row name="material" null="1" autoincrement="0">
-<datatype>BOOLEAN</datatype>
+<row name="product" null="1" autoincrement="0">
+<datatype>CHAR</datatype>
+<default>NULL</default></row>
+<row name="gender" null="1" autoincrement="0">
+<datatype>CHAR</datatype>
+<default>NULL</default></row>
+<row name="size" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="price" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="available" null="1" autoincrement="0">
 <datatype>BOOLEAN</datatype>
-<default>NULL</default></row>
-<row name="size" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="user_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
@@ -88,7 +97,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="1079" y="445" name="bookings">
+<table x="1069" y="79" name="bookings">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
