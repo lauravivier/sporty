@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'equipments/search'
   get 'users/show'
   get 'user/show'
@@ -22,5 +23,10 @@ Rails.application.routes.draw do
 
   # devise_for :users
   root to: "equipments#search"
+
+  devise_for :users
+   root to: "home#index"
+
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
