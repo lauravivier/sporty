@@ -1,5 +1,6 @@
 class Equipment < ApplicationRecord
   belongs_to :user
+  has_many :bookings
   validates :sport, presence: true
   validates :clothe, presence: true
   validates :price, presence: true
