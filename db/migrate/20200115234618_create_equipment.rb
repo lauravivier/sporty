@@ -3,8 +3,7 @@ class CreateEquipment < ActiveRecord::Migration[6.0]
     create_table :equipment do |t|
       t.string :name
       t.string :sport
-      t.integer :price
-      t.reference :user
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end

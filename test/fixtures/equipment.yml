@@ -3,11 +3,9 @@
 one:
   name: MyString
   sport: MyString
-  price: 1
-  user: 
+  user: one
 
 two:
   name: MyString
   sport: MyString
-  price: 1
-  user: 
+  user: two
