@@ -2,12 +2,12 @@
 
 one:
   start_date: 2020-01-16
-  end_end: 2020-01-16
+  end_date: 2020-01-16
   user: one
   equipment: one
 
 two:
   start_date: 2020-01-16
-  end_end: 2020-01-16
+  end_date: 2020-01-16
   user: two
   equipment: two
