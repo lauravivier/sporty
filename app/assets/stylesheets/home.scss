@@ -56,15 +56,17 @@ a:hover {
 .img-circle {
   border-radius: 50%;
 }
-.btn-blue {
-  background-color: #6B72E1;
+.btn-pink {
+  background-color: FF6F60;
   color: white;
   padding: 15px 20px;
   border-radius: 4px;
 }
-.btn-blue:hover {
-  background-color: black;
+.btn-pink:hover {
+  background-color: FF6F60;
   color: white;
+  padding: 15px 20px;
+  border-radius: 4px;
 }
 .list-inline {
   list-style: none;
