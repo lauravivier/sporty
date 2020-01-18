@@ -45,20 +45,20 @@
               <h1 class="display-3 font-weight-bold text-shadow">La location de matériel de sport </h1>
                <h1 class="h6 text-shadow"> Pour tous, partout et de façon accessible </h1>
             </div>
-            <div class="search-bar mt-5 p-3 p-lg-1 pl-lg-4">
+            <div class="search-bar mt-5 p-3 p-lg-1 pl-lg-5">
               <form action="#">
                 <div class="row">
-                  <div class="col-lg-4 d-flex align-items-center form-group">
-                    <input type="text" name="search" placeholder="Quel matériel cherchez-vous ?" class="form-control border-0 shadow-0">
-                  </div>
                   <div class="col-lg-3 d-flex align-items-center form-group">
+                    <input type="text" name="search" placeholder="Equipement" class="form-control border-0 shadow-0">
+                  </div>
+                  <div class="col-lg-2 d-flex align-items-center form-group">
                     <div class="input-label-absolute input-label-absolute-right w-100">
                       <label for="location" class="label-absolute"><i class="fa fa-crosshairs"></i><span class="sr-only"> Ville </span></label>
                       <input type="text" name="location" placeholder="Location" id="location" class="form-control border-0 shadow-0">
                     </div>
                   </div>
-                  <div class="col-lg-3 d-flex align-items-center form-group no-divider">
-                    <select title="Catégories" data-style="btn-form-control" class="selectpicker">
+                  <div class="col-lg-2 d-flex align-items-center form-group no-divider">
+                    <select title="Sport" data-style="btn-form-control" class="selectpicker">
                       <option value="small">Aqua Poney</option>
                       <option value="medium">Snow</option>
                       <option value="large">Skate</option>
@@ -66,7 +66,16 @@
                       <option value="x-large">Equitation</option>
                     </select>
                   </div>
-                  <div class="col-lg-2">
+                  <div class="col-lg-2 d-flex align-items-center form-group no-divider">
+                    <select title="Âge" data-style="btn-form-control" class="selectpicker">
+                      <option value="small">3 à 7 ans</option>
+                      <option value="medium">7 à 10 ans</option>
+                      <option value="large">10 à 13 ans</option>
+                      <option value="x-large">13 à 16 ans</option>
+                      <option value="x-large">16 à 18 ans</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3">
                     <button type="submit" class="btn btn-primary btn-block rounded-xl h-100"> Recherche </button>
                   </div>
                 </div>
