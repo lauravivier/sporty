@@ -7,12 +7,10 @@ class User < ApplicationRecord
 
   validates :email, presence: true, uniqueness: true
   validates :postal_code, presence: true
-  validates :adress, presence: true
+  validates :address, presence: true
   validates :phone_number, presence: true
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-
-         #tetste
 end

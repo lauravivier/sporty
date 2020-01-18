@@ -1,8 +1,9 @@
 class Equipment < ApplicationRecord
   belongs_to :user
+
   validates :sport, presence: true
-  validates :clothe, presence: true
+  validates :description, presence: true
   validates :price, presence: true
   validates :available, presence: true
-  validates :size, presence: true
+  validates :kid_size, presence: true, inclusion: { in: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] }
 end
