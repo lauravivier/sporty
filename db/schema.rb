@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2020_01_21_075452) do
 
   create_table "bookings", force: :cascade do |t|
     t.date "start_date"
-    t.date "end_date"
+    t.date "end_end"
     t.bigint "user_id", null: false
     t.bigint "equipment_id", null: false
     t.datetime "created_at", precision: 6, null: false
