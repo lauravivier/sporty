@@ -4,6 +4,6 @@ class EquipmentsController < ApplicationController
   end
 
   def index
-    @equipments = Equipment.all
+    @equipment = Equipment.all
   end
 end
