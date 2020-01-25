@@ -1,7 +1,7 @@
 class EquipmentsController < ApplicationController
   def show
     @equipment = Equipment.find(params[:id])
-  endxz
+  end
 
   def index
 

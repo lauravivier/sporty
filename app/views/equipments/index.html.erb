@@ -44,17 +44,17 @@
         <div class="d-flex justify-content-between align-items-center flex-column flex-md-row mb-4">
           <div class="mr-3">
 
-            <p class="mb-3 mb-md-0"><strong><%= @equipments.count %></strong> results found</p>
+            <p class="mb-3 mb-md-0"><strong><%= @equipments.count %></strong> résultats</p>
 
-           
+
           </div>
           <div>
             <label for="form_sort" class="form-label mr-2">Sort by</label>
             <select name="sort" id="form_sort" data-style="btn-selectpicker" title="" class="selectpicker">
-              <option value="sortBy_0">Most popular   </option>
-              <option value="sortBy_1">Recommended   </option>
-              <option value="sortBy_2">Newest   </option>
-              <option value="sortBy_3">Oldest   </option>
+              <option value="sortBy_0">Plus populaires   </option>
+              <option value="sortBy_1">Recommandés   </option>
+              <option value="sortBy_2">Nouveaux   </option>
+              <option value="sortBy_3">Anciens   </option>
             </select>
           </div>
         </div>
@@ -105,36 +105,49 @@
     </script>
   </body>
 
-  <!-- test Cyrille-->
-  <div class="container">
-    <h1> Les équipements disponibles </h1>
-    <div class="row">
-      <% @equipments.each do |equipment| %>
-      <!-- <p> <%= link_to "voir le détail", equipments_path(equipment) %> </p> -->
-
-        <div data-marker-id="59c0c8e3503eb77d487e8082" class="col-sm-6 col-lg-4 mb-5 hover-animate">
-          <div class="card h-100 border-0 shadow">
-            <div class="card-img-top overflow-hidden gradient-overlay"> <img src="https://contents.mediadecathlon.com/p1518526/k$40477566163fc76e6cd989b26f25a093/sq/Planche+de+surf+rigide+6+2+egg+900+Livr+e+avec+3+ailerons.webp?f=700x700" alt="Sunny Private Studio-Apartment" class="img-fluid"/><a href="detail-rooms.html" class="tile-link"></a>
-              <div class="card-img-overlay-bottom z-index-20">
-                <div class="media text-white text-sm align-items-center"><img src="https://d19m59y37dris4.cloudfront.net/directory/1-4/img/avatar/avatar-9.jpg" alt="Barbora" class="avatar avatar-border-white mr-2"/>
-                  <div class="media-body"> <%= equipment.user.email %> </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-body d-flex align-items-center">
-              <div class="w-100">
-                <h6 class="card-title"><a href="detail-rooms.html" class="text-decoration-none text-dark"><%= equipment.name %></a></h6>
-                  <div class="d-flex card-subtitle mb-3">
-                    <p class="flex-grow-1 mb-0 text-muted text-sm"><%= equipment.sport %></p>
-                    <p class="flex-shrink-1 mb-0 card-stars text-xs text-right"><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-gray-300">                                  </i>
-                    </p>
+  <div style="display: flex; justify-content: center;">
+    <% pictures = [
+      "https://contents.mediadecathlon.com/p1518526/k$40477566163fc76e6cd989b26f25a093/sq/Planche+de+surf+rigide+6+2+egg+900+Livr+e+avec+3+ailerons.webp?f=700x700",
+      "https://contents.mediadecathlon.com/p1574488/k$35c7189f1581c73cfa548e152cb7ad5c/sq/Planche+de+surf+en+mousse+6+900+Livr+e+avec+3+ailerons.webp?f=1000x1000",
+      "https://contents.mediadecathlon.com/p1517258/k$c493700ee6f70f37ec9b2ec6a2fe206b/sq/Planche+de+surf+rigide+Egg+6+6+500+Livr+e+avec+3+ailerons.webp?f=1000x1000",
+      "https://contents.mediadecathlon.com/p1518521/k$56f56e729a6d7af205ac417ac94c5dd1/sq/Planche+de+surf+rigide+5+10+shortboard+900+Livr+e+avec+3+ailerons.webp?f=1000x1000"
+    ] %>
+    <% avatars = [
+      "https://d19m59y37dris4.cloudfront.net/directory/1-4/img/avatar/avatar-8.jpg",
+      "https://d19m59y37dris4.cloudfront.net/directory/1-4/img/avatar/avatar-9.jpg",
+      "https://d19m59y37dris4.cloudfront.net/directory/1-4/img/avatar/avatar-5.jpg",
+      "https://d19m59y37dris4.cloudfront.net/directory/1-4/img/avatar/avatar-4.jpg"
+    ] %>
+    <div style="width: 80%">
+      <h1> Les équipements disponibles </h1>
+      <div class="row">
+        <% @equipments.each_with_index do |equipment, index| %>
+          <%= link_to equipment_path(equipment) do %>
+            <div data-marker-id="59c0c8e3503eb77d487e8082" class="col-sm-6 col-lg-4 mb-5 hover-animate">
+              <div class="card h-100 border-0 shadow">
+                <div class="card-img-top overflow-hidden gradient-overlay"> <img src= <%= pictures[index] %> alt="Sunny Private Studio-Apartment" class="img-fluid"/>
+                  <div class="card-img-overlay-bottom z-index-20">
+                    <div class="media text-white text-sm align-items-center"><img src= <%= avatars[index] %> alt="Barbora" class="avatar avatar-border-white mr-2"/>
+                      <div class="media-body"> <%= equipment.user.email %> </div>
+                    </div>
                   </div>
-                  <p class="card-text text-muted"><span class="h4 text-primary"><%= equipment.price %></span> par jour</p>
+                </div>
+                <div class="card-body d-flex align-items-center">
+                  <div class="w-100">
+                    <h6 class="card-title"><a href="#" class="text-decoration-none text-dark"><%= equipment.name %></a></h6>
+                      <div class="d-flex card-subtitle mb-3">
+                        <p class="flex-grow-1 mb-0 text-muted text-sm"><%= equipment.sport %></p>
+                        <p class="flex-shrink-1 mb-0 card-stars text-xs text-right"><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-gray-300">                                  </i>
+                        </p>
+                      </div>
+                      <p class="card-text text-muted"><span class="h4 text-primary"><%= equipment.price %></span> € par jour</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        <% end %>
+            <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
   </ul>
