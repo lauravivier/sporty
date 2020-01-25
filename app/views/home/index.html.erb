@@ -44,9 +44,9 @@
               <h1 class="display-3 font-weight-bold text-shadow">La location de matériel de sport </h1>
                <h1 class="h6 text-shadow"> Pour tous, partout et de façon accessible </h1>
             </div>
-            <div class="search-bar mt-5 p-3 p-lg-1 pl-lg-5">
+            <!-- <div class="search-bar"> -->
               <form action="#">
-                <div class="row">
+                <div class="row search-bar">
                   <div class="col-lg-3 d-flex align-items-center form-group">
                     <input type="text" name="search" placeholder="Equipement" class="form-control border-0 shadow-0">
                   </div>
@@ -74,12 +74,12 @@
                       <option value="x-large">16 à 18 ans</option>
                     </select>
                   </div>
-                  <div class="col-lg-3">
-                    <%= link_to "Recherche", equipments_path, class:"btn btn-primary btn-block rounded-xl h-100" %>
-                  </div>
+                  <!-- <div class="col-lg-3"> -->
+                    <%= link_to "Recherche", equipments_path, class:"btn btn-pink rounded-xl h-100 col-lg-3" %>
+                  <!-- </div> -->
                 </div>
               </form>
-            </div>
+            <!-- </div> -->
           </div>
         </div>
       </div>
