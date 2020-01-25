@@ -1,7 +1,10 @@
-<h1>Equipments search</h1>
-<p>Find me in app/views/equipments/search.html.erb</p>
-
-<h2> <%= @equipment.name %> </h2>
-
-<p> <% link_to "retour à votre sélection", equipments_path %> </p>
-
+<div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    <h1> <%= @equipment.sport %> </h1>
+    <h2> <%= @equipment.name %> </h2>
+<h2> <%= @equipment.kid_age %> ans </h2>
+    <p>Product description with <strong> <%= @equipment.price %> €uros. </strong></p>
+  </div>
+</div>

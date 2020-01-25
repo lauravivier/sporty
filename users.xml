@@ -104,7 +104,7 @@
 <row name="start_date" null="1" autoincrement="0">
 <datatype>DATE</datatype>
 <default>NULL</default></row>
-<row name="end_date" null="1" autoincrement="0">
+<row name="end_end" null="1" autoincrement="0">
 <datatype>DATE</datatype>
 <default>NULL</default></row>
 <row name="equipment_id" null="1" autoincrement="0">

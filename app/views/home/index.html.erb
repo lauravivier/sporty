@@ -4,7 +4,6 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Directory Theme by Bootstrapious</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -30,7 +29,7 @@
     <!-- Font Awesome CSS-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
-  <body style="padding-top: 72px;">
+  <body style="padding-top: 0px;">
     <section class="hero-home">
       <div class="swiper-container hero-slider">
         <div class="swiper-wrapper dark-overlay">
@@ -45,9 +44,9 @@
               <h1 class="display-3 font-weight-bold text-shadow">La location de matériel de sport </h1>
                <h1 class="h6 text-shadow"> Pour tous, partout et de façon accessible </h1>
             </div>
-            <div class="search-bar mt-5 p-3 p-lg-1 pl-lg-5">
+            <!-- <div class="search-bar"> -->
               <form action="#">
-                <div class="row">
+                <div class="row search-bar">
                   <div class="col-lg-3 d-flex align-items-center form-group">
                     <input type="text" name="search" placeholder="Equipement" class="form-control border-0 shadow-0">
                   </div>
@@ -75,12 +74,12 @@
                       <option value="x-large">16 à 18 ans</option>
                     </select>
                   </div>
-                  <div class="col-lg-3">
-                    <%= link_to "Recherche", equipments_path, class:"btn btn-primary btn-block rounded-xl h-100" %>
-                  </div>
+                  <!-- <div class="col-lg-3"> -->
+                    <%= link_to "Recherche", equipments_path, class:"btn btn-pink rounded-xl h-100 col-lg-3" %>
+                  <!-- </div> -->
                 </div>
               </form>
-            </div>
+            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -138,7 +137,7 @@
     <section class="py-7 position-relative dark-overlay"><img src="https://www.liveabout.com/thmb/BjbE9HKof52xsDboTauLcFPkq8c=/2123x1412/filters:fill(auto,1)/kidskating-58e13ad55f9b58ef7e3d754d.jpg" alt="" class="bg-image">
       <div class="container">
         <div class="overlay-content text-white py-lg-5">
-          <h3 class="display-3 font-weight-bold text-serif text-shadow mb-5"> Prêt pour tes prochaines aventures sportives ? </h3><a href="category-rooms.html" class="btn btn-light"> J'y fonce Alphonse ! </a>
+          <h1 class="display-3 font-weight-bold text-shadow"> Prêt pour tes prochaines aventures sportives ? </h3><a href="category-rooms.html" class="btn btn-light"> J'y fonce Alphonse ! </a>
         </div>
       </div>
     </section>
