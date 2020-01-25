@@ -11,3 +11,29 @@
   width: 100px;
   list-style: none;
 }
+
+.btn-blue {
+  background-color: #FF6F60 !important;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 15px;
+}
+.btn-blue:hover {
+  background-color: #ff7860 !important;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 15px;
+}
+
+.btn-green {
+  background-color: white !important;
+  color: #FF6F60;
+  padding: 10px 10px;
+  border-radius: 15px;
+}
+.btn-green:hover {
+  background-color: white !important;
+  color: #ff7860;
+  padding: 10px 10px;
+  border-radius: 15px;
+}
