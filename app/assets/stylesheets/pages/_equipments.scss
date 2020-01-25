@@ -3,10 +3,11 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .card-product {
+
   margin-top: 20px;
   padding: 16px;
   overflow: hidden;
-  height: 500px;
+  height: 800px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -14,8 +15,10 @@
 }
 
 .card-product img {
+
   height: 100%;
   width: 500px;
+
 }
 
 
@@ -46,7 +49,6 @@
 
 .image-style {
     display: inline-block !important;
-    position: absolute !important;
     opacity: 1 !important;
 
 }
