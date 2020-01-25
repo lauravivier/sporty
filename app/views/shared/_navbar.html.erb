@@ -5,6 +5,12 @@
     <%= link_to root_path do %>
       <img src="https://res.cloudinary.com/danxfwhmp/image/upload/v1579794991/sporty_klat0k.png" width="100px">
     <% end %>
+    <div> <% if user_signed_in? %>
+    <h2 class="text-center align"> Bienvenue Cyrille 😁 </h2>
+    <% else %>
+    <h2></h2>
+         <% end %>
+       </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -16,17 +22,16 @@
       </li>
       <li class="nav-item">
        <div>
-        <ul class="nav-link">
-          <% if user_signed_in? %>
-        </ul>
 
-        <ul class="nav pull-right">
-          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+          <% if user_signed_in? %>
+
+        <ul class="nav">
+          <li><%= link_to "Se Déconnecter", destroy_user_session_path, class:"btn-blue", method: :delete %></li>
         </ul>
             <% else %>
         <ul class="nav">
-          <li><%= link_to "S'inscrire", new_user_session_path, class:"btn-green" %></li>
-          <li><%= link_to "Se Connecter", new_user_registration_path, class:"btn-blue" %></li>
+          <li><%= link_to "S'inscrire", new_user_registration_path, class:"btn-green" %></li>
+          <li><%= link_to "Se Connecter", new_user_session_path, class:"btn-blue" %></li>
         </ul>
 
           <% end %>

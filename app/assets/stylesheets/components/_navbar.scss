@@ -12,6 +12,13 @@
   list-style: none;
 }
 
+.align {
+align-items: center;
+  color: #FF6F60;
+  margin-bottom: -5px;
+  font-size: 24px;
+}
+
 .btn-blue {
   background-color: #FF6F60 !important;
   color: white;
@@ -25,6 +32,7 @@
   border-radius: 15px;
 }
 
+
 .btn-green {
   background-color: white !important;
   color: #FF6F60;
@@ -37,3 +45,4 @@
   padding: 10px 10px;
   border-radius: 15px;
 }
+
