@@ -25,9 +25,9 @@
           <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
         </ul>
             <% else %>
-        <ul class="nav pull-right">
-          <li><%= link_to "Sign in ", new_user_session_path %></li>
-          <li><%= link_to " Sign up", new_user_registration_path %></li>
+        <ul class="nav">
+          <li><%= link_to "Sign in", new_user_session_path %></li>
+          <li><%= link_to "Sign up", new_user_registration_path %></li>
         </ul>
 
           <% end %>
