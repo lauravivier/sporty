@@ -95,3 +95,18 @@ a:hover {
 #introduction p {
   margin-bottom: 40px;
 }
+
+.btn-yellow {
+  background-color: #FF6F60 !important;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 15px;
+  top: 20px;
+}
+
+.btn-yellow:hover {
+  background-color: #ff7860 !important;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 15px;
+}

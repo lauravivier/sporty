@@ -9,9 +9,9 @@ puts 'seed is coming'
 
 laura = User.create(email: 'laura@gmail.com', password: 'lewagon')
 mary = User.create(email: 'mary@me.com', password: 'marytooshort')
-paul = User.create(email: 'paul@me.com', password: 'popole')
-brenda = User.create(email: 'brenda@me.com', password: 'password')
-pierre = User.create(email: 'pierre@me.com', password: 'ciseaux')
+paul = User.create(email: 'paul@boulanger.be', password: 'popole')
+brenda = User.create(email: 'brenda@la-star.com', password: 'password')
+pierre = User.create(email: 'pierre@le-gentil.fr', password: 'ciseaux')
 
 puts "user = #{User.count}"
 
