@@ -9,10 +9,7 @@ class Equipment < ApplicationRecord
   # validates :description, presence: true
   # validates :available, presence: true
 
-  include PgSearch::Model
-  pg_search_scope :search_by_sport_and_kid_age,
-    against: [:sport, :kid_age],
-    using: {
-      tsearch: { prefix: true } # <-- now `superman batm` will return something!
-    }
 end
+
+
+
