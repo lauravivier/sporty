@@ -4,6 +4,9 @@ class EquipmentsController < ApplicationController
   end
 
   def index
-    @equipment = Equipment.all
+    if params[:query].present?
+      @equipment = Equipment.where(sport: params[:query])
+    else
+      @equipment = Equipment.all
   end
 end
