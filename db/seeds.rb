@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts 'seed is coming'
 
 laura = User.create(email: 'laura@gmail.com', password: 'lewagon')
 mary = User.create(email: 'mary@me.com', password: 'marytooshort')
@@ -12,20 +13,31 @@ paul = User.create(email: 'paul@me.com', password: 'popole')
 brenda = User.create(email: 'brenda@me.com', password: 'password')
 pierre = User.create(email: 'pierre@me.com', password: 'ciseaux')
 
-equipments = [{user: mary, sport: 'surf', kid_age: '12', name: 'planche peu servie, visible à Paris 13e, 30€/jour'},
-  {user: paul, sport: 'surf', kid_age: '12', name: 'Jamais utilisé ! Location sur place, 35€/jour'},
-  {user: brenda, sport: 'surf', kid_age: '12', name: 'planche enfant 8-12 ans. Idéal pour débutant, 20€/jour'},
-  {user: pierre, sport: 'surf', kid_age: '12', name: 'planche neuve. Disponible à Paris ou Biarritz. 32€/jour'}]
+puts "user = #{User.count}"
+
+equipments = [{user_id: 1, sport: 'surf', kid_age: 12, name: 'planche peu servie, visible à Paris 13e', price: 20},
+  {user_id: 2, sport: 'surf', kid_age: 13, name: 'Jamais utilisé ! Location sur place', price: 20},
+  {user_id: 2, sport: 'surf', kid_age: 14, name: 'planche enfant 8-12 ans. Idéal', price: 20},
+  {user_id: 3, sport: 'surf', kid_age: 15, name: 'planche neuve. Disponible à Paris ou Biarritz', price: 20}]
 
 equipments.each do |attributes|
   Equipment.create(attributes)
 end
 
-bookings = [{equipment_id: '1', user: mary, start_date: '01/04/2020', end_date: '29/04/2020', address: 'biarritz'},
-  {equipment_id: '2', user: paul, start_date: '01/04/2020', end_date: '30/05/2020', address:' biarritz'},
-  {equipment_id: '3', user: brenda, start_date: '01/04/2020', end_date: '30/06/2020', address: 'biarritz'},
-  {equipment_id: '4', user: pierre, start_date: '01/04/2020', end_date: '30/06/2020', address: 'biarritz'}]
+puts "equipment = #{Equipment.count}"
+
+bookings = [{equipment_id: 1, user_id: 1, address: 'biarritz'},
+  { equipment_id: 2, user_id: 2, address: 'paris'},
+  { equipment_id: 3, user_id: 3, address: 'marseille'},
+  { equipment_id: 4, user_id: 4, address: 'bordeaux'}]
 
 bookings.each do |attributes|
-  Booking.create(attributes)
+  Booking.create!(attributes)
 end
+
+puts "booking = #{Booking.count}"
+
+
+
+#Equipment.create(name: 'planche peu servie, visible à Paris 13e, 30€/jour', sport: 'surf', user_id: 1, kid_age: '12', price: 20)
+puts 'end of seed'
