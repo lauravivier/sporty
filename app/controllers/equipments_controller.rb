@@ -13,5 +13,4 @@ class EquipmentsController < ApplicationController
     @equipments = Equipment.all
 
   end
-
 end
